@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Main {
     public static void main(String[] args) {
         System.out.println("This is a programme to calculate CGPA from the marks you enter");
@@ -11,8 +13,26 @@ class Main {
         System.out.println("Enter the marks of Subject 4");
         int sub4 = sc.nextInt();
         
-        int cgpa = (sub1+sub2+sub3+sub4)/4;
-        System.out.println("The CGPA of subjects are: " + cgpa);
+        double percentage = (sub1 + sub2 + sub3 + sub4) / 4.0;
+        double cgpa = percentage / 9.5;
+        System.out.println("The CGPA of subjects is: " + cgpa);
         
+        if (cgpa >= 9) {
+            System.out.println("Your Grade is A+");
+        } else if (cgpa >= 8) {
+            System.out.println("Your Grade is A");
+        } else if (cgpa >= 7) {
+            System.out.println("Your Grade is B+");
+        } else if (cgpa >= 6) {
+            System.out.println("Your Grade is B");
+        } else if (cgpa >= 5) {
+            System.out.println("Your Grade is C");
+        } else if (cgpa >= 4) {
+            System.out.println("Your Grade is D");
+        } else {
+            System.out.println("Your Grade is F, You need to work hard");
+        }
+        
+        System.out.println("The percentage of subjects is: " + percentage + "% \n Good Job !");
     }
 }
